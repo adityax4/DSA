@@ -1,22 +1,26 @@
 #include<iostream>
-#include<string>
 using namespace std;
 
-class A{
-    int a;
-    public:
-    A(int i){
-        a=i;
-    }
-    void assign(int i){
-        a=i;
-    }
-    int getA(){
-        return a;
-    }
-};
+bool checkEven(int n){
+  if(n%2==0){
+    return true;
+  }
+  else return false;
+}
+
 int main(){
-    A obj;
-    obj.assign(5);
-    cout<<obj.getA();
+  int n;
+  cout<<"Enter the number: "<<endl;
+  cin>>n;
+  
+   bool isEVen = checkEven(n);
+   if(isEVen){
+    cout<<n<<" is an Even Number"<<endl;
+
+   }
+   else
+   {
+    cout<<n<<" is an Odd Number"<<endl;
+   }
+   
 }
