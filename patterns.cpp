@@ -181,9 +181,49 @@ void pattern12(int n){
 	
 }
 
+void pattern13(int n){
+   int start=1;
+   for (int i = 0; i < n; i++)
+   {
+      for (int j = 0; j <= i; j++)
+      {
+         cout<<start<<" ";
+         start+=1;
+      }
+      cout<<endl;
+   }
+   
+}
+
+void pattern14(int n){
+	
+	for (int i = 0; i < n; i++)
+	{
+		for (char ch = 'A'; ch <= 'A' + i; ch++)
+		{
+			cout<<ch<<" ";
+		}
+		cout<<endl;
+	}
+	
+}
+
+void pattern15(int n){
+	
+	for (int i = 0; i < n; i++)
+	{
+		for (char ch = 'A'; ch <= 'A'+(n-i-1); ch++)
+		{
+			cout<<ch<<" ";
+		}
+		cout<<endl;
+	}
+	
+}
+
 int main(){
 	int n;
 	cin>>n;
-	pattern12(n);
+	pattern15(n);
 	
 }
