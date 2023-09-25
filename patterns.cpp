@@ -265,9 +265,84 @@ void pattern17(int n){
 
 }
 
+void pattern18(int n){
+	for (int i = 0; i < n; i++)
+	{
+		for (char ch = ('A'+n-1)-i; ch <= 'A'+n-1; ch++)
+		{
+			cout<<ch<<" ";
+		}
+		cout<<endl;
+	}
+	
+}
+
+void pattern19(int n){
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 1; j < n-i+1; j++)
+		{
+			cout<<"*";
+		}
+		for (int j = 1; j <= 2*i; j++)
+		{
+			cout<<" ";
+		}
+		for (int j = 1; j < n-i+1; j++)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <=i; j++)
+		{
+			cout<<"*";
+		}
+		for (int j = 1; j <= 2*n-2*i; j++)
+		{
+			cout<<" ";
+		}
+		for (int j = 1; j <=i; j++)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+	
+}
+
+void pattern20(int n){
+	int space= 2*n-2;
+	for (int i = 1; i <= 2*n-1; i++)
+	{
+		int stars=i;
+		
+		if(i>n) stars = 2*n-i;
+		for (int j = 1; j <= stars ; j++)
+		{
+			cout<<"*";
+		}
+		for (int j = 1; j <= space ; j++)
+		{
+			cout<<" ";
+		}
+		for (int j = 1; j <= stars ; j++)
+		{
+			cout<<"*";
+		}
+		cout<<endl;
+		if(i<n) space-=2;
+		else space+=2;
+	}
+	
+}
+
 int main(){
 	int n;
 	cin>>n;
-	pattern17(n);
+	pattern20(n);
 	
 }
