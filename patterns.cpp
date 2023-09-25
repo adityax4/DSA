@@ -368,12 +368,10 @@ void pattern22(int n){
 		}
 		cout<<endl;
 	}
-	
 }
 
 int main(){
 	int n;
 	cin>>n;
 	pattern22(n);
-	
 }
