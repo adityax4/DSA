@@ -29,5 +29,39 @@ int main(){
     for(auto it2 : v){
         cout<<it2<<" ";
     }
-
+    cout<<endl;
+    v.erase(v.begin());
+    for(auto it2 : v){
+        cout<<it2<<" ";
+    }
+    cout<<endl;
+    v.erase(v.begin()+1, v.begin()+5);
+    for(auto it2 : v){
+        cout<<it2<<" ";
+    }
+    cout<<endl;
+    v.insert(v.begin(), 1);
+    for(auto it2 : v){
+        cout<<it2<<" ";
+    }
+    cout<<endl;
+    vector<int>v1(2,10);
+    for(auto it2 : v1){
+        cout<<it2<<" ";
+    }
+    cout<<endl;
+    v.pop_back();
+    for(auto it2 : v){
+        cout<<it2<<" ";
+    }
+    cout<<endl;
+    v.size();
+    for(auto it2 : v){
+        cout<<it2<<" ";
+    }
+    cout<<v.empty();
+    v.clear();
+    for(auto it2 : v){
+        cout<<it2<<" ";
+    }
 }
