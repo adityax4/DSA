@@ -1,10 +1,9 @@
-1 Aditya
-2 Aditya
-3 Aditya
-4 Aditya
-5 Aditya
-6 Aditya
-7 Aditya
-8 Aditya
-9 Aditya
-10 Aditya
+1->2
+2->2
+3->2
+12->1
+2
+2
+2
+0
+1
