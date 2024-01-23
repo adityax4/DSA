@@ -2,7 +2,6 @@
 using namespace std;
 
 class Node{
-    
     public:
     int data;
     Node* next;
@@ -18,10 +17,8 @@ class Node{
     }
 };
 
-
-
 int main(){
-    vector<int> arr = {2,3,5,8};
+    vector<int> arr = {22,31,50,84};
     Node* head=new Node(arr[0]);
     Node* mover = head;
     for(int i=1;i<arr.size();i++){
@@ -29,5 +26,10 @@ int main(){
         mover->next=temp;
         mover=temp;
     }
-    cout<<head->next->data;
+    Node* temp1 = head;
+    while (temp1)
+    {
+        cout<<temp1->data<<" ";
+        temp1=temp1->next;
+    }
 }
