@@ -109,12 +109,34 @@ void deleteNode(Node* temp){
     free(temp);
 }
 
+Node* insertB4Head(Node* head, int val){
+    Node* newNode= new Node(val,head,nullptr);
+    head->back=newNode;
+    return newNode;
+}
+
+Node* insertB4Tail(Node*head, int val){
+    Node* temp = head;
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    Node* prev = temp->back;
+    Node* newNode = new Node(val, temp, prev);
+    prev->next=newNode;
+    temp->back=newNode;
+    return head;
+}
+
 int main(){
     vector<int> arr = {2,4,6,8,10,12};
     Node* head = convert2DLL(arr);
+
     head = deleteHead(head);
     head = deleteTail(head);
     head = deleteKth(head, 2);
     deleteNode(head->next);
+
+    head = insertB4Head(head, 20);
+    head = insertB4Tail(head, 16);
     print(head);
 }
