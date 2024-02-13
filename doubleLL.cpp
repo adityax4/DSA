@@ -127,6 +127,33 @@ Node* insertB4Tail(Node*head, int val){
     return head;
 }
 
+Node* insertB4Kth(Node* head, int k, int val){
+    if(k==1){
+        return insertB4Head(head, val);
+    }
+    int cnt=0;
+    Node* temp = head;
+    while (temp!=NULL)
+    {
+        cnt++;
+        if(cnt==k) break;
+        temp=temp->next;
+    }
+    Node* prev = temp->back;
+    Node* newNode = new Node(val,temp,prev);
+    prev->next=newNode;
+    temp->back=newNode;
+    return head;
+}
+
+void insertB4Node(Node* node, int val){
+    Node* prev = node->back;
+    Node* newNode = new Node(val, node, prev);
+    prev->next=newNode;
+    node->back=newNode;
+    return;
+}
+
 int main(){
     vector<int> arr = {2,4,6,8,10,12};
     Node* head = convert2DLL(arr);
@@ -138,5 +165,8 @@ int main(){
 
     head = insertB4Head(head, 20);
     head = insertB4Tail(head, 16);
+    head = insertB4Kth(head, 4, 22);
+    insertB4Node(head->next, 100);
+    
     print(head);
 }
